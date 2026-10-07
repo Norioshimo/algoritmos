@@ -37,7 +37,7 @@ public class Main extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jButtonAes = new javax.swing.JButton();
-        jButtonRsi = new javax.swing.JButton();
+        jButtonRsa = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Algoritmos");
@@ -65,11 +65,11 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jButtonRsi.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonRsi.setText("RSI");
-        jButtonRsi.addActionListener(new java.awt.event.ActionListener() {
+        jButtonRsa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonRsa.setText("RSA");
+        jButtonRsa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRsiActionPerformed(evt);
+                jButtonRsaActionPerformed(evt);
             }
         });
 
@@ -86,7 +86,7 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonRsi, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonRsa, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(139, 139, 139))
             .addComponent(jSeparator1)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,7 +103,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
-                .addComponent(jButtonRsi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonRsa, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addGap(5, 5, 5)
@@ -143,13 +143,13 @@ public class Main extends javax.swing.JFrame {
         aes.setVisible(true);
     }//GEN-LAST:event_jButtonAesActionPerformed
 
-    private void jButtonRsiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRsiActionPerformed
+    private void jButtonRsaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRsaActionPerformed
         // TODO add your handling code here:
-        System.out.println("Opcion RSI");
-        FrmRsi rsi = new FrmRsi();
-        rsi.setVisible(true);
+        System.out.println("Opcion RSA");
+        FrmRsa rsa = new FrmRsa();
+        rsa.setVisible(true);
 
-    }//GEN-LAST:event_jButtonRsiActionPerformed
+    }//GEN-LAST:event_jButtonRsaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,7 +188,7 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAes;
-    private javax.swing.JButton jButtonRsi;
+    private javax.swing.JButton jButtonRsa;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

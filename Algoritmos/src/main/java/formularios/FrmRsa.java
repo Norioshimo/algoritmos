@@ -5,7 +5,7 @@
  */
 package formularios;
 
-import algoritmos.RSI;
+import algoritmos.RSA;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -15,12 +15,12 @@ import javax.swing.JOptionPane;
  *
  * @author Acer
  */
-public class FrmRsi extends javax.swing.JFrame {
+public class FrmRsa extends javax.swing.JFrame {
 
     /**
-     * Creates new form FrmRsi
+     * Creates new form FrmRsa
      */
-    public FrmRsi() {
+    public FrmRsa() {
         initComponents();
         setIconImage((new ImageIcon(getClass().getResource("/icon.png"))).getImage());
         setLocationRelativeTo(null);
@@ -76,14 +76,14 @@ public class FrmRsi extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Algoritmo RSI");
+        setTitle("Algoritmo RSA");
         setResizable(false);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("ALGORITMO RSI");
+        jLabel8.setText("ALGORITMO RSA");
 
         jButtonGenerarClave.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonGenerarClave.setText("Generar Claves");
@@ -302,9 +302,9 @@ public class FrmRsi extends javax.swing.JFrame {
     private void jButtonGenerarClaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarClaveActionPerformed
         try {
             // TODO add your handling code here:
-            RSI rsi = new RSI();
-            jTextAreaClavePrivado.setText(rsi.getPrivateKey());
-            jTextAreaClavePublica.setText(rsi.getPublicKey());
+            RSA rsa = new RSA();
+            jTextAreaClavePrivado.setText(rsa.getPrivateKey());
+            jTextAreaClavePublica.setText(rsa.getPublicKey());
         } catch (Exception ex) {
             System.out.println("Error al generar la clave " + ex);
             ex.printStackTrace();
@@ -327,14 +327,14 @@ public class FrmRsi extends javax.swing.JFrame {
         String valor = this.jTextFieldValor.getText();
 
         try {
-            RSI rsi = null;
+            RSA rsa = null;
             if (jRadioButtonEncriptar.isSelected()) {//Si es encriptar
-                rsi = new RSI();
-                String resul = rsi.encrypt(valor, semilla);
+                rsa = new RSA();
+                String resul = rsa.encrypt(valor, semilla);
                 jTextAreaResultado.setText(resul);
             } else {
-                rsi = new RSI(); 
-                String resul =rsi.decrypt(valor, semilla);
+                rsa = new RSA(); 
+                String resul =rsa.decrypt(valor, semilla);
                 jTextAreaResultado.setText(resul);
             }
 
@@ -367,20 +367,20 @@ public class FrmRsi extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmRsi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmRsa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmRsi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmRsa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmRsi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmRsa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmRsi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmRsa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmRsi().setVisible(true);
+                new FrmRsa().setVisible(true);
             }
         });
     }

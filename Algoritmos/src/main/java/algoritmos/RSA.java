@@ -8,7 +8,7 @@ import java.security.SecureRandom;
 import javax.crypto.Cipher;
 import java.util.Base64;
 
-public class RSI {
+public class RSA {
 
     private String publicKey;//Clave publica
     private String privateKey;//clave privado.
@@ -31,7 +31,7 @@ public class RSI {
     }
 
     // </editor-fold>
-    public RSI() throws Exception {
+    public RSA() throws Exception {
         KeyPair kp = this.generateKeyPair();
 
         this.publicKey = this.keyToBase64String(kp.getPublic());
@@ -45,7 +45,7 @@ public class RSI {
      * @param key
      * @param keyType, public or private
      */
-    public RSI(String key, String keyType) throws Exception {
+    public RSA(String key, String keyType) throws Exception {
         if ("public".equals(keyType)) {
             this.publicKey = key;
         } else if ("private".equals(keyType)) {
@@ -105,18 +105,18 @@ public class RSI {
     public static void main(String[] args) {
         try {
             // Generar el par de claves
-            RSI rsi = new RSI();
+            RSA rsa = new RSA();
 
             // Mensaje a cifrar
             String originalMessage = "Este es un mensaje secreto";
             System.out.println("Mensaje original: " + originalMessage);
 
             // Cifrar el mensaje
-            String encryptedMessage = rsi.encrypt(originalMessage, rsi.getPublicKey());
+            String encryptedMessage = rsa.encrypt(originalMessage, rsa.getPublicKey());
             System.out.println("Mensaje cifrado: " + encryptedMessage);
 
             // Descifrar el mensaje
-            String decryptedMessage = rsi.decrypt(encryptedMessage, rsi.getPrivateKey());
+            String decryptedMessage = rsa.decrypt(encryptedMessage, rsa.getPrivateKey());
             System.out.println("Mensaje descifrado: " + decryptedMessage);
 
         } catch (Exception e) {
